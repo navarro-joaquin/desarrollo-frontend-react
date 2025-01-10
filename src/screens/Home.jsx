@@ -1,5 +1,5 @@
 // import Logo from "../Components/Home/Logo.jsx";
-// import Github from "../Components/Home/Github.jsx";
+// import GitHub from "../Components/Home/Github.jsx";
 import OpenLink from "../Components/Core/OpenLink.jsx";
 import Body from "../Components/Home/Body.jsx";
 import Footer from "../Components/Home/Footer.jsx";
