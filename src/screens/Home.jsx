@@ -1,5 +1,7 @@
 // import Logo from "../Components/Home/Logo.jsx";
 // import GitHub from "../Components/Home/Github.jsx";
+import { useSelector } from "react-redux";
+
 import OpenLink from "../Components/Core/OpenLink.jsx";
 import Body from "../Components/Home/Body.jsx";
 import Footer from "../Components/Home/Footer.jsx";
@@ -9,8 +11,10 @@ import ReactLogo from "../assets/react.svg";
 import GithubLogo from "../assets/github.svg";
 
 const Home = () => {
+  const count = useSelector((state) => state.counter.value)
   return (
     <div>
+      <p>{`Count value: ${count}`}</p>
       <div>
         <OpenLink
           redirectURL={"https://vite.dev"}
