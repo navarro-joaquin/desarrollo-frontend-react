@@ -114,3 +114,67 @@ td {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Estilos Practica final */
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fefefe;
+}
+.form-input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-input:focus {
+  border-color: #5b9bd5;
+  box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
+  outline: none;
+}
+.form-submit {
+  display: inline-block;
+  background-color: #5b9bd5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.form-submit:active {
+  background-color: #3a79ab;
+  transform: translateY(0);
+}
+.notification-correct {
+  background-color: #bfefbd;
+  color: #59cc63;
+  padding: 2rem;
+  border: 1px solid #61cc59;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+.notification-error {
+  background-color: #efbdbd;
+  color: #cc5959;
+  padding: 2rem;
+  border: 1px solid #cc5959;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+.show-button {
+  position: absolute;
+  right: 440px;
+  top: 476px;
+}
