@@ -16,12 +16,12 @@ export const formSlice = createSlice({
     updateForm: (state, action) => {
       state.formData = {...action.payload};
     },
-    resetForm: (state) => {
+    resetFormData: (state) => {
       state.formData = initialState.formData;
     }
   },
 });
 
-export const { updateForm, resetForm } = formSlice.actions;
+export const { updateForm, resetFormData } = formSlice.actions;
 
 export default formSlice.reducer;

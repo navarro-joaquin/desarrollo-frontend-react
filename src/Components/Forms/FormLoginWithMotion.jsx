@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react"
 
 import { useSelector, useDispatch } from "react-redux";
-import { updateForm, resetForm } from "../../store/features/form/formSlice.js";
+import { updateForm } from "../../store/features/form/formSlice.js";
 
 import useForm from "../Hooks/useForm.js";
 import ModalInfo from "../Modals/ModalInfo.jsx";
@@ -10,9 +10,6 @@ import ModalInfo from "../Modals/ModalInfo.jsx";
 // eslint-disable-next-line react/prop-types
 const FormWithMotionAndHook = ({titleForm}) => {
   const dispatch = useDispatch();
-
-  //const formState = useSelector((state) => state.form.formData);
-  //console.log('Valor actual en el store', formState);
 
   const { formData: initialState } = useSelector((state) => state.form);
 

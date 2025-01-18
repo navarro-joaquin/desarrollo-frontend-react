@@ -53,8 +53,7 @@ th {
   padding-top: 10px;
 }
 td {
-  padding: 2px;
-  padding-right: 40px;
+  padding: 2px 40px 2px 2px;
 }
 
 .navbar {
@@ -67,6 +66,7 @@ td {
   border-bottom: solid 1px #ccc;
   padding: 0.5rem 1rem;
   justify-content: space-around;
+  color: black;
 }
 
 .nav-link {
@@ -173,8 +173,13 @@ td {
   text-align: center;
   position: relative;
 }
+.container {
+  display: flex;
+  align-items: center;
+}
+.input {
+  flex: 1;
+}
 .show-button {
-  position: absolute;
-  right: 440px;
-  top: 476px;
+  margin-left: 40px;
 }
