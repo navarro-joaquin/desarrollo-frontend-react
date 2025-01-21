@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 
-import useForm from "../Hooks/useForm.js";
 import { resetFormData } from "../../store/features/form/formSlice.js";
 
 import ModalInfo from "../Modals/ModalInfo.jsx";
@@ -13,7 +12,6 @@ const Navigator = () => {
   const [showModal, setShowModal] = useState(false);
 
   const formData = useSelector((state) => state.form.formData);
-  const { resetForm } = useForm({});
 
   const handleButton = () => {
     setShowModal(true);
@@ -24,7 +22,6 @@ const Navigator = () => {
   }
 
   const handleLogout = () => {
-    resetForm();
     dispatch(resetFormData());
     setShowModal(false);
   }
