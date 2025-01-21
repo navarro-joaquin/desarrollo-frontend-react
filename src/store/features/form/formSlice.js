@@ -17,7 +17,12 @@ export const formSlice = createSlice({
       state.formData = {...action.payload};
     },
     resetFormData: (state) => {
-      state.formData = initialState.formData;
+      state.formData = {
+        module: '',
+        username: '',
+        email: '',
+        password: '',
+      }
     }
   },
 });

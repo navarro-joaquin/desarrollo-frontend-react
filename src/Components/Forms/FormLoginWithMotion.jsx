@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react"
 
 import { useSelector, useDispatch } from "react-redux";
@@ -13,21 +13,25 @@ const FormWithMotionAndHook = ({titleForm}) => {
 
   const { formData: initialState } = useSelector((state) => state.form);
 
-  const {formData, handleChange} = useForm(initialState);
+  const { formData: localFormData, handleChange, setFormData } = useForm(initialState);
 
   const [showModal, setShowModal] = useState(false);
   const [style, setStyle] = useState('notification-success');
   const [message, setMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
+  useEffect(() => {
+    setFormData(initialState);
+  }, [initialState, setFormData]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('datos del formulario', formData);
+    console.log('datos del formulario', localFormData);
 
-    if (formData.password === 'mod7USIP-ALVARO') {
-      dispatch(updateForm(formData));
+    if (localFormData.password === 'mod7USIP-ALVARO') {
+      dispatch(updateForm(localFormData));
       setStyle('notification-correct');
-      setMessage(`Bienvenido: ${formData.username}!!`);
+      setMessage(`Bienvenido: ${localFormData.username}!!`);
       setShowModal(true);
     } else {
       setStyle('notification-error');
@@ -77,7 +81,7 @@ const FormWithMotionAndHook = ({titleForm}) => {
                 type="text"
                 name="module"
                 className="form-input"
-                value={formData.module}
+                value={localFormData.module}
                 onChange={handleChange}
                 disabled
                 required
@@ -97,7 +101,7 @@ const FormWithMotionAndHook = ({titleForm}) => {
                 type="text"
                 name="username"
                 className="form-input"
-                value={formData.username}
+                value={localFormData.username}
                 onChange={handleChange}
                 required
               />
@@ -116,7 +120,7 @@ const FormWithMotionAndHook = ({titleForm}) => {
                 type="email"
                 name="email"
                 className="form-input"
-                value={formData.email}
+                value={localFormData.email}
                 onChange={handleChange}
                 required
               />
@@ -135,7 +139,7 @@ const FormWithMotionAndHook = ({titleForm}) => {
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 className="form-input input"
-                value={formData.password}
+                value={localFormData.password}
                 onChange={handleChange}
                 required
               />

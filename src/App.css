@@ -183,3 +183,71 @@ td {
 .show-button {
   margin-left: 40px;
 }
+
+/* Estilos LandingPage */
+.contenedor {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.encabezado {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.encabezado h1 span {
+  font-weight: bold;
+}
+
+.bienvenido p {
+  color: #1a1a1a;
+}
+
+h2 {
+  color: #4caf50;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 5px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.temas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.temas-grid p {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-left: 5px solid #4caf50;
+  border-radius: 5px;
+  color: #1a1a1a;
+}
+
+.recursos p {
+  color: #1a1a1a;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
